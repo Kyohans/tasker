@@ -1,0 +1,17 @@
+Users:
+  path = /users, method = GET -- get all users
+  path = /users/<id>, method = GET -- get user by id
+  path = /users, method = POST -- create new user
+    example data: { 'user_name': '...', 'user_email': '...' }
+
+Projects:
+  path = /projects, method = GET -- get all projects
+  path = /projects/<id>, method = GET -- get project by id
+  path = /projects, method = POST -- create new project
+    example data: { 'project_name': '...', 'project_description': '...', 'managed_by': user_id }
+
+Tasks:
+  path = /projects/<project_id>/tasks, method = GET -- get all tasks for project_id
+  path = /projects/<project_id>/tasks/<task_id>, method = GET -- get task by id
+  path = /projects/<project_id>/tasks, method = POST -- create new task for project_id
+    example data: { 'task_name': '...', 'task_description': '...' }
